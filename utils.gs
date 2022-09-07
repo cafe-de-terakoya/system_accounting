@@ -98,14 +98,14 @@ function pickupAccountsPayable(fromSheet, toSheet) {
 
   const allData = fromSheet.getRange(
     ROW_FIRST_DATA,
-    COLUMN_FIRST_FIELD,
+    COL_FIRST_FIELD,
     lastRow - (ROW_FIRST_DATA-1),
-    COLUMN_CALCULATED_DATE
+    COL_CALCULATED_DATE
   ).getValues();
 
   for (data of allData) {
-    const credit = data[COLUMN_CREDIT-COLUMN_FIRST_FIELD];
-    const calculatedDate = data[COLUMN_CALCULATED_DATE-COLUMN_FIRST_FIELD];
+    const credit = data[COL_CREDIT-COL_FIRST_FIELD];
+    const calculatedDate = data[COL_CALCULATED_DATE-COL_FIRST_FIELD];
     if (credit == '未払金' && calculatedDate == '') {
       toSheet.appendRow(data);
     }
