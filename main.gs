@@ -37,16 +37,16 @@ function main_2() {
 
   const tmp = SS_JORNAL.insertSheet(SHEET_NAME_ACCOUNTS_PAYABLE, SS_JORNAL.getNumSheets());
 
-  tmp.setColumnWidth(COLUMN_DATE, 85);
-  tmp.setColumnWidth(COLUMN_DEBIT, 120);
-  tmp.setColumnWidth(COLUMN_DEBIT_AMOUNT, 80);
-  tmp.setColumnWidth(COLUMN_CREDIT_AMOUNT, 80);
-  tmp.setColumnWidth(COLUMN_CREDIT, 120);
-  tmp.setColumnWidth(COLUMN_SUMMARY, 500);
-  tmp.setColumnWidth(COLUMN_NOTE, 160);
-  tmp.setColumnWidth(COLUMN_DATE, 85);
-  tmp.setColumnWidth(COLUMN_TEMPORARY_PAYER, 90);
-  tmp.setColumnWidth(COLUMN_CALCULATED_DATE, 85);
+  tmp.setColumnWidth(COL_DATE, 85);
+  tmp.setColumnWidth(COL_DEBIT, 120);
+  tmp.setColumnWidth(COL_DEBIT_AMOUNT, 80);
+  tmp.setColumnWidth(COL_CREDIT_AMOUNT, 80);
+  tmp.setColumnWidth(COL_CREDIT, 120);
+  tmp.setColumnWidth(COL_SUMMARY, 500);
+  tmp.setColumnWidth(COL_NOTE, 160);
+  tmp.setColumnWidth(COL_DATE, 85);
+  tmp.setColumnWidth(COL_TEMPORARY_PAYER, 90);
+  tmp.setColumnWidth(COL_CALCULATED_DATE, 85);
   
   for (sheet of allSheets_jornal) {
     pickupAccountsPayable(sheet, tmp);
